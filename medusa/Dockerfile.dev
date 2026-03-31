@@ -1,0 +1,28 @@
+# Development Dockerfile (used by docker-compose.yml)
+FROM node:20
+
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y netcat-openbsd && rm -rf /var/lib/apt/lists/*
+
+# Copy package files
+COPY package*.json ./
+
+# Install dependencies with optimizations
+RUN npm install --no-audit --no-fund --loglevel=error
+
+# Copy application code
+COPY . .
+
+# Ensure directories exist
+RUN mkdir -p src/api/store src/api/admin src/modules src/scripts uploads
+
+# Make start script executable
+RUN chmod +x start.sh
+
+# Expose ports (9000 for API)
+EXPOSE 9000
+
+# Default command (development)
+CMD ["./start.sh"]

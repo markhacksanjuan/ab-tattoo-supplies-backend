@@ -1,0 +1,11 @@
+{
+  "watchIgnore": [
+    "uploads/**",
+    "uploads",
+    "**/uploads/**",
+    "data/**",
+    "build/**",
+    "dist/**",
+    ".cache/**"
+  ]
+}

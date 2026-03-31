@@ -1,0 +1,2 @@
+# This directory is required for Medusa development mode
+# Custom code like subscribers, services, and API routes go here

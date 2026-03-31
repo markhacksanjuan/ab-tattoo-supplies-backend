@@ -1,0 +1,17 @@
+node_modules
+.git
+.gitignore
+*.log
+.env
+.env.local
+.env.*.local
+.env.production.example
+.env.gcp.example
+dist
+.cache
+build
+data
+uploads
+*.md
+.vscode
+.idea

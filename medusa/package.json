@@ -1,0 +1,30 @@
+{
+    "name": "abtattoo-medusa-backend",
+    "version": "1.0.0",
+    "description": "AB-Tattoo Supplies E-commerce Backend",
+    "scripts": {
+        "dev": "medusa develop",
+        "build": "medusa build",
+        "start": "medusa start",
+        "db:generate": "medusa db:generate",
+        "db:migrate": "medusa db:migrate",
+        "seed": "medusa exec ./src/scripts/seed.ts"
+    },
+    "dependencies": {
+        "@medusajs/admin-sdk": "2.12.5",
+        "@medusajs/file-s3": "2.12.5",
+        "@medusajs/framework": "2.12.5",
+        "@medusajs/medusa": "2.12.5",
+        "@medusajs/cli": "2.12.5",
+        "pg": "^8.11.3"
+    },
+    "devDependencies": {
+        "@types/node": "^20.11.5",
+        "typescript": "^5.3.3",
+        "ts-node": "^10.9.2",
+        "tsx": "^4.7.0"
+    },
+    "engines": {
+        "node": ">=20"
+    }
+}
